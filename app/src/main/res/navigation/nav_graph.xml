@@ -9,10 +9,22 @@
         android:id="@+id/mainFragment"
         android:name="com.memento.fragments.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/scannerFragment"
         android:name="com.memento.fragments.ScannerFragment"
         android:label="fragment_scanner"
         tools:layout="@layout/fragment_scanner" />
+    <fragment
+        android:id="@+id/addImageFragment"
+        android:name="com.memento.fragments.AddImageFragment"
+        android:label="fragment_add_image"
+        tools:layout="@layout/fragment_add_image" />
 </navigation>
