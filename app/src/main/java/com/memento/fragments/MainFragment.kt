@@ -25,11 +25,8 @@ class MainFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mBinding.BTNSlideUp.setOnClickListener {
-            val toScanner = MainFragmentDirections
-                .actionMainFragmentToScannerFragment()
-            Navigation.findNavController(mBinding.root)
-                .navigate(toScanner)
-//            Log.d("Main", "string")
+            val toScanner = MainFragmentDirections.actionMainFragmentToScannerFragment()
+            Navigation.findNavController(mBinding.root).navigate(toScanner)
         }
     }
 
